@@ -27,17 +27,45 @@
 		.right{
 			float: right;
 		}
-		.btn{
+		.os-box{
+			display: inline-block;
+			width:48%;
+			margin: 0;
+			padding: 0;
+			border:0 none;
+		}
+		.spliter{
+			position: absolute;
+			left:50%;
+			display: inline-block;
+			margin-top: 10px;
+			padding: 0;
+			border-left:1px dashed gray;
+			height:280px; 
+		}
+		.btn{			
 			display: inline-block;
 			text-align:center;
-			vertical-align: middle;
-			width:48%;
+			vertical-align: top;		
 			height:100px;
 			background-color: #32B400; 
 			color:#fff;
+			width: 100%;
 			font-size: 40px;
 			text-decoration: none;
-			padding-top: 40px;
+			padding-top: 35px;
+			margin-top: 10px;
+		}
+		.icon{
+			height: 60px;
+			border:0 none;
+		}
+		.btn-text{
+			position: relative;
+			top: -12px;
+			display: inline-block;
+			margin-bottom: 10px;
+			margin-left: 10px;
 		}
 		.clearfix:before,
 		.clearfix:after{
@@ -54,9 +82,18 @@
  <body> 		
 		<div class="main-box">
 			<div class="image-box"><img src="images/asyey.png"></div>
-			<div class="btn-box">
-				<a role="button" class="btn left" href="itms-services://?action=download-manifest&url=https://raw.githubusercontent.com/meronmee/asyey/master/app/teacher.plist">教师版</a>
-				<a role="button" class="btn right" href="itms-services://?action=download-manifest&url=https://raw.githubusercontent.com/meronmee/asyey/master/app/parent.plist">家长版</a>
+			<div class="btn-box clearfix">
+				<div class="os-box left">
+					<a role="button" class="btn left" href="itms-services://?action=download-manifest&url=https://asyey.my.phpcloud.com/app/teacher.plist"><img class="icon" src="images/iphone.png"/><span class="btn-text">iOS 教师版</span></a>
+					<a role="button" class="btn right" href="itms-services://?action=download-manifest&url=https://asyey.my.phpcloud.com/app/parent.plist"><img class="icon" src="images/iphone.png"/><span class="btn-text">iOS 家长版</span></a>
+				</div>
+
+				<div class="spliter left"></div>
+
+				<div class="os-box right">
+					<a role="button" class="btn left" href="http://www.asyey.cn:8080/xtg_web/app/app!download.action?osType=1&clientType=2"><img class="icon" src="images/android.png"/><span class="btn-text">Android 教师版</span></a>
+					<a role="button" class="btn right" href="http://www.asyey.cn:8080/xtg_web/app/app!download.action?osType=1&clientType=1"><img class="icon" src="images/android.png"/><span class="btn-text">Android 家长版</span></a>
+				</div>
 			</div>
 		</div>
 		<div class="clearfix"></div>
